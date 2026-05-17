@@ -117,14 +117,14 @@
         </div>
 
         <div class="btn-group">
-            <button onclick="setMood('calm', 'Follow the Water', 'Calm')">Calm</button>
-            <button onclick="setMood('a dangerous', 'Invasion of the Unwanted', 'Crisis')">Crisis</button>
-            <button onclick="setMood('upbeat', 'Resurrection', 'Upbeat')">Upbeat</button>
+            <button onclick="setMood('happy', 'Following the Water', 'Calm', 'Following the Water mast.mp3')">Calm</button>
+            <button onclick="setMood('jazzy', 'Invasion of the Unwanted', 'Crisis', 'Invasion of the Unwanted mast.mp3')">Crisis</button>
+            <button onclick="setMood('upbeat', 'Resurrection', 'Upbeat', 'Resurrection mast.mp3')">Upbeat</button>
         </div>
     </div>
 
     <script>
-        function setMood(moodClass, song, title) {
+        function setMood(moodClass, song, title, source) {
 
             // Change body class for CSS transition
             document.body.className = moodClass;
@@ -136,7 +136,7 @@
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
 
-            player.src = song + " mast.mp3";
+            player.src = source;
             player.currentTime = 0;
             player.play();
             
