@@ -94,18 +94,17 @@
         }
     </style>
 </head>
-<body class="upbeat"> <div class="container">
-        <h1 id="mood-title">Upbeat</h1>
-        <p id="song-name">Now Playing: Hyper Drive</p>
+<body class="default">
 
-        <div class="visualizer">
+    <div class="container">
+        <h1 id="mood-title">Pick a Vibe</h1>
+        <p id="song-name">Select a song to change the atmosphere.</p>
+
+        <div class="visualizer" id="viz">
             <div class="bar" style="animation-delay: 0.1s"></div>
-            <div class="bar" style="animation-delay: 0.3s"></div>
             <div class="bar" style="animation-delay: 0.2s"></div>
-            <div class="bar" style="animation-delay: 0.4s"></div>
-            <div class="bar" style="animation-delay: 0.6s"></div>
             <div class="bar" style="animation-delay: 0.3s"></div>
-            <div class="bar" style="animation-delay: 0.1s"></div>
+            <div class="bar" style="animation-delay: 0.4s"></div>
             <div class="bar" style="animation-delay: 0.5s"></div>
         </div>
 
@@ -118,9 +117,15 @@
 
     <script>
         function setMood(moodClass, song, title) {
+            // Change body class for CSS transition
             document.body.className = moodClass;
+            
+            // Update Text
             document.getElementById('mood-title').innerText = title;
             document.getElementById('song-name').innerText = "Now Playing: " + song;
+
+            // Logic to play/change audio would go here
+            console.log("Playing " + song + " in " + moodClass + " mode.");
         }
     </script>
 </body>
