@@ -136,9 +136,13 @@
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
 
-            document.player.src = source;
-            document.player.currentTime = 0;
-            document.player.play();
+            const the_sound = new Audio(source);
+
+            the_sound.currentTime = 0;
+            the_sound.play()
+
+
+            
             
         }
     </script>
