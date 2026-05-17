@@ -148,9 +148,9 @@
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
 
-            (moodClass == 'happy') ? document.getElementsByClassName('audio-group').getElementById('happy').play() : document.getElementsByClassName('audio-group').getElementById('happy').stop();
-            (moodClass == 'jazzy') ? document.getElementsByClassName('audio-group').getElementById('jazzy').play() : document.getElementsByClassName('audio-group').getElementById('jazzy').stop();
-            (moodClass == 'upbeat') ? document.getElementsByClassName('audio-group').getElementById('upbeat').play() : document.getElementsByClassName('audio-group').getElementById('upbeat').stop();
+            (moodClass == 'happy') ? document.getElementById('happy').play() : document.getElementById('happy').stop();
+            (moodClass == 'jazzy') ? document.getElementById('jazzy').play() : document.getElementById('jazzy').stop();
+            (moodClass == 'upbeat') ? document.getElementById('upbeat').play() : document.getElementById('upbeat').stop();
 
             
         }
