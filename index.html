@@ -27,7 +27,7 @@
         }
 
         /* Mood Styles */
-        body.happy { --bg-color: #FFDE59; --accent-color: #FF914D; --text-color: #5C4033; }
+        body.happy { --bg-color: #ffde5b; --accent-color: #FF914D; --text-color: #5C4033; }
         body.jazzy { --bg-color: #2D1B4E; --accent-color: #00D4FF; --text-color: #E0E0E0; }
         body.upbeat { --bg-color: #9b53ad; --accent-color: #6d2b4c; --text-color: #FFFFFF; }
 
@@ -136,9 +136,9 @@
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
 
-            player.src = source;
-            player.currentTime = 0;
-            player.play();
+            document.player.src = source;
+            document.player.currentTime = 0;
+            document.player.play();
             
         }
     </script>
