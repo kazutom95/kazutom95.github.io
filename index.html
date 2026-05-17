@@ -121,9 +121,21 @@
             <button onclick="setMood('jazzy', 'Invasion of the Unwanted', 'Crisis', 'Invasion of the Unwanted mast.mp3')">Crisis</button>
             <button onclick="setMood('upbeat', 'Resurrection', 'Upbeat', 'Resurrection mast.mp3')">Upbeat</button>
         </div>
+
+
+
+        <div class="audio-group">
+            <audio id="happy" src="Following the Water mast.mp3"></audio>
+            <audio id="jazzy" src="Invasion of the Unwanted mast.mp3"></audio>
+            <audio id="upbeat" src="Resurrection mast.mp3"></audio>
+        </div>
     </div>
 
     <script>
+
+        
+
+
         function setMood(moodClass, song, title, source) {
 
             // Change body class for CSS transition
@@ -136,13 +148,10 @@
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
 
-            const the_sound = new Audio(source);
+            (moodClass == 'happy') ? document.getElementsByClassName('audio-group').getElementById('happy').play() : document.getElementsByClassName('audio-group').getElementById('happy').stop();
+            (moodClass == 'jazzy') ? document.getElementsByClassName('audio-group').getElementById('jazzy').play() : document.getElementsByClassName('audio-group').getElementById('jazzy').stop();
+            (moodClass == 'upbeat') ? document.getElementsByClassName('audio-group').getElementById('upbeat').play() : document.getElementsByClassName('audio-group').getElementById('upbeat').stop();
 
-            the_sound.currentTime = 0;
-            the_sound.play()
-
-
-            
             
         }
     </script>
