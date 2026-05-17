@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kazutom95 - Sonic Moods</title>
+    <title>Matthew Kim - Music 270 Final Project</title>
     <style>
         :root {
             --bg-color: #f0f0f0;
@@ -29,7 +29,7 @@
         /* Mood Styles */
         body.happy { --bg-color: #FFDE59; --accent-color: #FF914D; --text-color: #5C4033; }
         body.jazzy { --bg-color: #2D1B4E; --accent-color: #00D4FF; --text-color: #E0E0E0; }
-        body.upbeat { --bg-color: #FF007F; --accent-color: #39FF14; --text-color: #FFFFFF; }
+        body.upbeat { --bg-color: #9b53ad; --accent-color: #6d2b4c; --text-color: #FFFFFF; }
 
         .container {
             display: flex;
@@ -117,14 +117,15 @@
         </div>
 
         <div class="btn-group">
-            <button onclick="setMood('happy', 'Sunshine Day', 'Happy')">Happy</button>
-            <button onclick="setMood('jazzy', 'Midnight Neon', 'Electric Jazzy')">Electric Jazzy</button>
-            <button onclick="setMood('upbeat', 'Hyper Drive', 'Upbeat')">Upbeat</button>
+            <button onclick="setMood('calm', 'Follow the Water', 'Calm')">Calm</button>
+            <button onclick="setMood('a dangerous', 'Invasion of the Unwanted', 'Crisis')">Crisis</button>
+            <button onclick="setMood('upbeat', 'Resurrection', 'Upbeat')">Upbeat</button>
         </div>
     </div>
 
     <script>
         function setMood(moodClass, song, title) {
+
             // Change body class for CSS transition
             document.body.className = moodClass;
             
@@ -134,6 +135,11 @@
 
             // Logic to play/change audio would go here
             console.log("Playing " + song + " in " + moodClass + " mode.");
+
+            player.src = song + " mast.mp3";
+            player.currentTime = 0;
+            player.play();
+            
         }
     </script>
 </body>
